@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Facebook OAuth Redirect</title>
+    <script>
+      // Simple script to forward the URL fragment (#access_token=...)
+      const params = new URLSearchParams(window.location.hash.substring(1));
+      if (params.has("access_token")) {
+        fetch("http://127.0.0.1:8765/?access_token=" + params.get("access_token"))
+          .then(() => {
+            document.body.innerText = "✅ Authentication complete! You can close this tab.";
+          });
+      } else {
+        document.body.innerText = "⚠️ No access token found.";
+      }
+    </script>
+  </head>
+  <body>
+    <p>Processing Facebook login...</p>
+  </body>
+</html>

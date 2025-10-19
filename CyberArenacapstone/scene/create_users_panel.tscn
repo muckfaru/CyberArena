@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=3 uid="uid://f75orldaceo5"]
+
+[ext_resource type="Texture2D" uid="uid://ncwfxpvc1nst" path="res://asset/create user bg .png" id="1_tblxd"]
+[ext_resource type="Script" uid="uid://u476cuxb6suk" path="res://script/create_users_panel.gd" id="1_tv1am"]
+[ext_resource type="FontFile" uid="uid://cc2vcvusnujt7" path="res://asset/fonts/Anton-Regular.ttf" id="2_sgjr0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tv1am"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlsjn"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcrkf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwo4p"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shsn4"]
+bg_color = Color(0.917647, 0.0666667, 0.211765, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="CreateUsersPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tv1am")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 708.0
+texture = ExtResource("1_tblxd")
+
+[node name="UsernameLineEdit" type="LineEdit" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 341.0
+offset_right = 867.0
+offset_bottom = 429.0
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+theme_override_styles/focus = SubResource("StyleBoxFlat_tv1am")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlsjn")
+max_length = 15
+caret_blink = true
+
+[node name="ConfirmButton" type="Button" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 466.0
+offset_right = 704.0
+offset_bottom = 539.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_pcrkf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fwo4p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_shsn4")
+text = "Confirm
+"
+
+[node name="MessageLabel" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 585.0
+offset_right = 473.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sgjr0")
+theme_override_font_sizes/font_size = 20
+text = "MESSAGE"
+
+[node name="CreateUserLabel" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 106.0
+offset_right = 785.0
+offset_bottom = 333.0
+theme_override_colors/font_color = Color(0.407843, 0.941176, 0.988235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.971093, 0.961405, 1)
+theme_override_colors/font_outline_color = Color(0.407843, 0.941176, 0.988235, 1)
+theme_override_constants/line_spacing = -45
+theme_override_fonts/font = ExtResource("2_sgjr0")
+theme_override_font_sizes/font_size = 90
+text = "CREATE YOUR
+ USERNAME"

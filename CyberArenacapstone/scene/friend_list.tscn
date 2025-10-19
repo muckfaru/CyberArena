@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://bohnaxmk78jfw"]
+
+[ext_resource type="Script" uid="uid://q2bbcw5bdvqc" path="res://script/friend_list.gd" id="1_30j1j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hlv06"]
+bg_color = Color(0.00784314, 0.0666667, 0.137255, 0.670588)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1816"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4l4v"]
+bg_color = Color(0, 0, 0, 0.317647)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30j1j"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r4jo"]
+bg_color = Color(0.0509804, 0.0784314, 0.109804, 0.705882)
+corner_detail = 20
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_js1fy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3d7hl"]
+bg_color = Color(0.0509804, 0.0784314, 0.109804, 0.705882)
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44a1m"]
+bg_color = Color(0.0313726, 0.054902, 0.0784314, 0.803922)
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+
+[node name="FriendListPanel" type="Panel"]
+offset_left = 861.0
+offset_top = 76.0
+offset_right = 1095.0
+offset_bottom = 593.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hlv06")
+script = ExtResource("1_30j1j")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest_Friends" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest_Requests" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest_Status" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest_Presence" type="HTTPRequest" parent="."]
+
+[node name="FriendLabel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 51.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1816")
+
+[node name="FriendListLabel" type="Label" parent="FriendLabel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 3.0
+offset_right = 216.0
+offset_bottom = 43.0
+text = "Friends"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FriendListVBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 83.0
+offset_right = 233.0
+offset_bottom = 263.0
+
+[node name="FriendRequestPanel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = -2.0
+offset_top = 323.0
+offset_right = 233.0
+offset_bottom = 362.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o4l4v")
+
+[node name="FriendRequestLabel" type="Label" parent="FriendRequestPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = -1.0
+offset_right = 217.0
+offset_bottom = 39.0
+text = "Friend Request"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FriendRequestsVBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 365.0
+offset_right = 236.0
+offset_bottom = 475.0
+
+[node name="AddFriendHBox" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 478.0
+offset_right = 226.0
+offset_bottom = 517.0
+theme_override_constants/separation = 17
+
+[node name="FriendUIDInput" type="LineEdit" parent="AddFriendHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.55
+theme_override_styles/focus = SubResource("StyleBoxFlat_30j1j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2r4jo")
+placeholder_text = "Enter Username"
+caret_blink = true
+caret_blink_interval = 1.35
+
+[node name="AddFriendButton" type="Button" parent="AddFriendHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+theme_override_styles/focus = SubResource("StyleBoxFlat_js1fy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3d7hl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_44a1m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2r4jo")
+text = "ADD
+"

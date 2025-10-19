@@ -1,0 +1,423 @@
+[gd_scene load_steps=25 format=3 uid="uid://5o3qtaqdnl8s"]
+
+[ext_resource type="Script" uid="uid://dqln3gc2uswuk" path="res://script/landing.gd" id="1_qr7a0"]
+[ext_resource type="VideoStream" uid="uid://copge130jsikm" path="res://asset/Cyberpunk_City_Video_Generation.ogv" id="2_qr7a0"]
+[ext_resource type="Texture2D" uid="uid://cq7k5uvykyfbt" path="res://asset/icons/code breaker 1.png" id="3_7xp6e"]
+[ext_resource type="PackedScene" uid="uid://bohnaxmk78jfw" path="res://scene/friend_list.tscn" id="3_hlv06"]
+[ext_resource type="Texture2D" uid="uid://cnxhft11givsa" path="res://asset/icons/logo 48x48.png" id="3_q33pn"]
+[ext_resource type="Texture2D" uid="uid://ca874tphfshxx" path="res://asset/avatars/default.png" id="3_qdyf0"]
+[ext_resource type="Texture2D" uid="uid://dp4co62dijgua" path="res://asset/icons/akashic tgc 1.png" id="4_hlv06"]
+[ext_resource type="Texture2D" uid="uid://cckv7p82fksqa" path="res://asset/icons/Defuse the trojan 1.png" id="5_1dlu4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irntn"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 0.419608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hlv06"]
+bg_color = Color(0.00784314, 0.0666667, 0.137255, 0.670588)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dlu4"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ie1g5"]
+bg_color = Color(0.243137, 0.243137, 0.243137, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdyf0"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 0.419608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsyjm"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 0.619608)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.027451, 0.482353, 0.596078, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08qf3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86hhj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_soi4p"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aar1m"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 0.619608)
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0313726, 0.47451, 0.584314, 1)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q33pn"]
+bg_color = Color(0.00784314, 0.0666667, 0.137255, 0.670588)
+
+[sub_resource type="Theme" id="Theme_qdyf0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxtpd"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bafi2"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xp6e"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.00784314, 0.0666667, 0.137255, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xoh2d"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Landing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 23.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qr7a0")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = -139.0
+offset_top = -28.0
+offset_right = 1303.0
+offset_bottom = 690.0
+stream = ExtResource("2_qr7a0")
+autoplay = true
+expand = true
+loop = true
+buffering_msec = 800
+
+[node name="HomePanel" type="Panel" parent="VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_left = 133.0
+offset_top = 22.0
+offset_right = 1292.0
+offset_bottom = 679.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_irntn")
+
+[node name="NewsPanel" type="Panel" parent="VideoStreamPlayer/HomePanel"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 120.0
+offset_right = 476.0
+offset_bottom = 449.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hlv06")
+
+[node name="Panel" type="Panel" parent="VideoStreamPlayer/HomePanel/NewsPanel"]
+layout_mode = 0
+offset_right = 409.0
+offset_bottom = 51.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1dlu4")
+
+[node name="GameSelectPanel" type="Panel" parent="VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_left = 148.0
+offset_top = 26.0
+offset_right = 1301.0
+offset_bottom = 674.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_irntn")
+
+[node name="allgame" type="Panel" parent="VideoStreamPlayer/GameSelectPanel"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 160.0
+offset_right = 798.0
+offset_bottom = 492.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ie1g5")
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="VideoStreamPlayer/GameSelectPanel/allgame"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 20.0
+offset_right = 715.0
+offset_bottom = 314.0
+texture = ExtResource("3_7xp6e")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="VideoStreamPlayer/GameSelectPanel/allgame"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 10.0
+offset_right = 485.0
+offset_bottom = 330.0
+texture = ExtResource("4_hlv06")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VideoStreamPlayer/GameSelectPanel/allgame"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 26.0
+offset_right = 220.0
+offset_bottom = 313.0
+texture = ExtResource("5_1dlu4")
+
+[node name="RankingPanel" type="Panel" parent="VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_left = 139.0
+offset_top = 22.0
+offset_right = 1298.0
+offset_bottom = 679.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_irntn")
+
+[node name="AkashicTgcRank" type="Button" parent="VideoStreamPlayer/RankingPanel"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 80.0
+offset_right = 321.0
+offset_bottom = 132.0
+text = "Akashic TGC"
+
+[node name="CodeBreakerRank" type="Button" parent="VideoStreamPlayer/RankingPanel"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 82.0
+offset_right = 505.0
+offset_bottom = 132.0
+text = "Code Breaker"
+
+[node name="list" type="Panel" parent="VideoStreamPlayer/RankingPanel"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 146.0
+offset_right = 774.0
+offset_bottom = 574.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hlv06")
+
+[node name="ProfilePanel" type="Panel" parent="VideoStreamPlayer"]
+visible = false
+layout_mode = 0
+offset_left = 134.0
+offset_top = 22.0
+offset_right = 1293.0
+offset_bottom = 670.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qdyf0")
+
+[node name="UserPanel" type="Panel" parent="VideoStreamPlayer/ProfilePanel"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 180.0
+offset_right = 376.0
+offset_bottom = 546.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bsyjm")
+
+[node name="usernameLabel" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 169.0
+offset_right = 232.0
+offset_bottom = 192.0
+text = "________________________________"
+
+[node name="levelLabel" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 63.0
+offset_right = 160.0
+offset_bottom = 86.0
+text = "Level: "
+
+[node name="winsLabel" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 95.0
+offset_right = 62.0
+offset_bottom = 118.0
+text = "W :  "
+
+[node name="MatchPlayedLabel" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 121.0
+offset_right = 159.0
+offset_bottom = 144.0
+text = "Match Played :"
+
+[node name="WinrateLabel" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 95.0
+offset_right = 185.0
+offset_bottom = 118.0
+text = "WR : "
+
+[node name="losesLabel" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 95.0
+offset_right = 115.0
+offset_bottom = 118.0
+text = "L : "
+
+[node name="StatusLabel" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = -123.0
+offset_top = 457.0
+offset_right = -50.0
+offset_bottom = 482.0
+text = "Status"
+
+[node name="usernameInput" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 39.0
+offset_right = 185.0
+offset_bottom = 71.0
+text = "MRKARK"
+
+[node name="levelInput" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 63.0
+offset_right = 202.0
+offset_bottom = 86.0
+text = "32"
+
+[node name="winsInput" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 95.0
+offset_right = 88.0
+offset_bottom = 118.0
+text = "23"
+
+[node name="winrateInput" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 95.0
+offset_right = 226.0
+offset_bottom = 118.0
+text = "46%"
+
+[node name="losesInput" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 96.0
+offset_right = 137.0
+offset_bottom = 119.0
+text = "32"
+
+[node name="ProfilePic" type="TextureRect" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 38.0
+offset_right = 103.0
+offset_bottom = 86.0
+texture = ExtResource("3_qdyf0")
+
+[node name="SaveProfile" type="Button" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 327.0
+offset_right = 169.0
+offset_bottom = 358.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_08qf3")
+text = "Save Profile"
+
+[node name="ChangeAvatarButton" type="Button" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 149.0
+offset_right = 171.0
+offset_bottom = 180.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_86hhj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_soi4p")
+text = "Select image"
+
+[node name="AvatarPicker" type="PopupPanel" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+
+[node name="GridContainer" type="GridContainer" parent="VideoStreamPlayer/ProfilePanel/UserPanel/AvatarPicker"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="MatchPlayedInput" type="Label" parent="VideoStreamPlayer/ProfilePanel/UserPanel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 121.0
+offset_right = 204.0
+offset_bottom = 144.0
+text = "55"
+
+[node name="Panel" type="Panel" parent="VideoStreamPlayer/ProfilePanel"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 180.0
+offset_right = 753.0
+offset_bottom = 546.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aar1m")
+
+[node name="FriendListPanel" parent="." instance=ExtResource("3_hlv06")]
+layout_mode = 0
+offset_left = 699.0
+offset_top = 80.0
+offset_right = 933.0
+offset_bottom = 597.0
+
+[node name="NavigationPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1164.0
+offset_bottom = 47.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q33pn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavigationPanel"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 0
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 1151.0
+offset_bottom = 45.0
+theme = SubResource("Theme_qdyf0")
+
+[node name="LogoButton" type="TextureButton" parent="NavigationPanel/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_q33pn")
+
+[node name="HomeNavigate" type="Button" parent="NavigationPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxtpd")
+text = "Home"
+
+[node name="GameNavigate" type="Button" parent="NavigationPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_bafi2")
+text = "Game"
+
+[node name="RankingNavigate" type="Button" parent="NavigationPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7xp6e")
+text = "Ranking"
+
+[node name="ProfileNavigate" type="Button" parent="NavigationPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7xp6e")
+text = "Profile"
+
+[node name="LogoutButton" type="Button" parent="NavigationPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xoh2d")
+text = "Log out"
