@@ -12,6 +12,7 @@ const BASE_URL: String = "https://firestore.googleapis.com/v1/projects/%s/databa
 var refresh_timer := Timer.new()
 var last_friend_list: Array = []
 var last_request_list: Array = []
+var friend_status_cache: Dictionary = {} # Store online status
 
 # ======================================================
 # 🔸 READY
@@ -81,7 +82,7 @@ func load_friend_requests() -> void:
 
 
 # ======================================================
-# 📜 LOAD FRIEND LIST
+# 📜 LOAD FRIEND LIST (with online status)
 # ======================================================
 func load_friend_list() -> void:
 	var uid = Auth.current_local_id
@@ -114,9 +115,60 @@ func load_friend_list() -> void:
 		if new_friends != last_friend_list:
 			last_friend_list = new_friends.duplicate()
 			print("[UI] 🔄 Friend list changed → refreshing UI")
-			_update_friend_ui(new_friends)
+			
+		# Fetch online status for each friend
+		_fetch_friends_status(new_friends, headers)
 	)
 	http.request(url, headers, HTTPClient.METHOD_GET)
+
+
+# ======================================================
+# 🟢 FETCH FRIENDS ONLINE STATUS
+# ======================================================
+func _fetch_friends_status(friends: Array, headers: Array) -> void:
+	if friends.is_empty():
+		_update_friend_ui(friends)
+		return
+	
+	var query_url = "%s:runQuery" % BASE_URL
+	var query_body = {
+		"structuredQuery": {
+			"from": [{"collectionId": "users"}],
+			"where": {
+				"fieldFilter": {
+					"field": {"fieldPath": "username"},
+					"op": "IN",
+					"value": {
+						"arrayValue": {
+							"values": friends.map(func(name): return {"stringValue": name})
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	var http := HTTPRequest.new()
+	add_child(http)
+	http.request_completed.connect(func(_r, code, _h, body):
+		http.queue_free()
+		if code != 200:
+			_update_friend_ui(friends)
+			return
+		
+		var arr = JSON.parse_string(body.get_string_from_utf8())
+		if typeof(arr) == TYPE_ARRAY:
+			for doc in arr:
+				if doc.has("document") and doc["document"].has("fields"):
+					var fields = doc["document"]["fields"]
+					var username = fields.get("username", {}).get("stringValue", "")
+					var is_online = fields.get("is_online", {}).get("booleanValue", false)
+					if username != "":
+						friend_status_cache[username] = is_online
+		
+		_update_friend_ui(friends)
+	)
+	http.request(query_url, headers, HTTPClient.METHOD_POST, JSON.stringify(query_body))
 
 
 # ======================================================
@@ -155,7 +207,7 @@ func _update_request_ui(requests: Array) -> void:
 
 
 # ======================================================
-# 🧾 UPDATE FRIEND LIST UI (with fade-in)
+# 🧾 UPDATE FRIEND LIST UI (with status indicator)
 # ======================================================
 func _update_friend_ui(friends: Array) -> void:
 	for child in friend_container.get_children():
@@ -163,6 +215,15 @@ func _update_friend_ui(friends: Array) -> void:
 
 	for name in friends:
 		var hbox = HBoxContainer.new()
+		hbox.add_theme_constant_override("separation", 8)
+		
+		# 🟢/🔴 Status indicator (circular dot)
+		var status_indicator = Label.new()
+		var is_online = friend_status_cache.get(name, false)
+		status_indicator.text = "●"  # Circle character
+		status_indicator.add_theme_color_override("font_color", Color.GREEN if is_online else Color.RED)
+		hbox.add_child(status_indicator)
+		
 		var lbl = Label.new()
 		lbl.text = name
 		hbox.add_child(lbl)
@@ -261,6 +322,8 @@ func unfriend_user(friend_name: String) -> void:
 		http_commit.request(commit_url, headers, HTTPClient.METHOD_POST, JSON.stringify(commit_body))
 	)
 	http_query.request(query_url, headers, HTTPClient.METHOD_POST, JSON.stringify(query_body))
+
+
 # ======================================================
 # ➕ SEND FRIEND REQUEST
 # ======================================================

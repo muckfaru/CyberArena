@@ -1,0 +1,47 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1760951111
+icon.svg::CompressedTexture2D/CompressedTexture2D::2618912282642067951::1760885445::1760885968::1::::<><><>0<>0<>532101d1a34b883816bd344ac8cee986<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile/TextFile::-1::1760885445::0::1::::<><><>0<>0<><>::
+::res://asset/::1760885969
+bg video.ogv::VideoStreamTheora/VideoStreamTheora::6912933641744932828::1760885445::0::1::::<><><>0<>0<><>::
+create user bg .png::CompressedTexture2D/CompressedTexture2D::917929657779900923::1760885445::1760885969::1::::<><><>0<>0<>4f4b7ec51dbfd55206ba9b0b335871e6<>res://.godot/imported/create user bg .png-0b88dc61bf8a439ac24b2ca37360fb45.ctex::
+Cyberpunk_City_Video_Generation.ogv::VideoStreamTheora/VideoStreamTheora::5786823699772027584::1760885445::0::1::::<><><>0<>0<><>::
+main lobby or landing bg.png::CompressedTexture2D/CompressedTexture2D::1925779909901959011::1760885445::1760885969::1::::<><><>0<>0<>959f2ca01f6086123290f63694ed1081<>res://.godot/imported/main lobby or landing bg.png-0e3ac8bd5a36535cfcc75a8bc00a1eb4.ctex::
+::res://asset/avatars/::1760885970
+avatar1.png::CompressedTexture2D/CompressedTexture2D::6870804527358111727::1760885445::1760885970::1::::<><><>0<>0<>f4b54b19fd8d402247c886334212fee1<>res://.godot/imported/avatar1.png-619e2b1ace00ee01ca6801c87bddf56a.ctex::
+avatar2.png::CompressedTexture2D/CompressedTexture2D::6251993411261811842::1760885445::1760885970::1::::<><><>0<>0<>5f1afa151847266d20a5b0d3969e1b51<>res://.godot/imported/avatar2.png-79be77e066e16ef856ab7a122e4ea09f.ctex::
+avatar3.png::CompressedTexture2D/CompressedTexture2D::872671872580956819::1760885445::1760885970::1::::<><><>0<>0<>636ea339e4a70a9df15cdc74f7fbb41a<>res://.godot/imported/avatar3.png-8f4d3285af72907fef156954741a0a94.ctex::
+default.png::CompressedTexture2D/CompressedTexture2D::4842961586503108545::1760885445::1760885970::1::::<><><>0<>0<>44d96a14ada3d8c604621ecc46e283b1<>res://.godot/imported/default.png-0bc182092b56554499f8e8fd7e3dd7db.ctex::
+::res://asset/fonts/::1760885968
+Anton-Regular.ttf::FontFile/FontFile::4970237017180234874::1760885445::1760885968::1::::<><><>0<>0<>97ad9ad3b34062ef57e13c6b3baeb83e<>res://.godot/imported/Anton-Regular.ttf-76a4de9c129321a8c8e24c34324e6b97.fontdata::
+::res://asset/icons/::1760885971
+akashic tgc 1.png::CompressedTexture2D/CompressedTexture2D::8272109765698655912::1760885445::1760885970::1::::<><><>0<>0<>8cd1b4285a1b51e54ca8159d0131c3aa<>res://.godot/imported/akashic tgc 1.png-382547fb8fb1dad092cadaab661fe628.ctex::
+background.png::CompressedTexture2D/CompressedTexture2D::8641294586393210428::1760885445::1760885971::1::::<><><>0<>0<>5c231b68fb40e75be41fdddc0ff4250a<>res://.godot/imported/background.png-a5da0143f91f1c34365bf12609bf1497.ctex::
+code breaker 1.png::CompressedTexture2D/CompressedTexture2D::5962584781482102889::1760885445::1760885970::1::::<><><>0<>0<>91e33fb39f7c3671831a258179855617<>res://.godot/imported/code breaker 1.png-bbb7dfe7b40cbd0ec29a790647962e36.ctex::
+code breaker.png::CompressedTexture2D/CompressedTexture2D::4290230420626542009::1760885445::1760885971::1::::<><><>0<>0<>38f0b9cdd608f333898e9e9a4e6c8fba<>res://.godot/imported/code breaker.png-cddb4f4b9e6251b4166d1f2c81a98622.ctex::
+Defuse the trojan 1.png::CompressedTexture2D/CompressedTexture2D::4935195874518567464::1760885445::1760885969::1::::<><><>0<>0<>1d0b651086813f4c6563c0767a89d5bb<>res://.godot/imported/Defuse the trojan 1.png-634ec78c3a0867e3c4fe266330e36fdc.ctex::
+icons8-facebook-logo-48.png::CompressedTexture2D/CompressedTexture2D::4675390381121329383::1760885445::1760885969::1::::<><><>0<>0<>11d6456619a07f3842414c6eef3e84de<>res://.godot/imported/icons8-facebook-logo-48.png-d4ee4ba6bc61be11183d39db195eb862.ctex::
+icons8-google-48.png::CompressedTexture2D/CompressedTexture2D::6930120026041958517::1760885445::1760885969::1::::<><><>0<>0<>6d6b2db687c3adc0985d4be215f343cc<>res://.godot/imported/icons8-google-48.png-7e32d81ce5415e43b2ca281f36e83cc1.ctex::
+logo 48x48.png::CompressedTexture2D/CompressedTexture2D::5733212010241133592::1760885445::1760885969::1::::<><><>0<>0<>f18d048f89e72d54719e993514e3338d<>res://.godot/imported/logo 48x48.png-d35925aabb3d2cad1e78a099c7fb1f97.ctex::
+logo-removebg-preview.png::CompressedTexture2D/CompressedTexture2D::5794262094005939947::1760885445::1760885969::1::::<><><>0<>0<>d03c3f0dcee3865df247fcf1af29e114<>res://.godot/imported/logo-removebg-preview.png-333cbafdc68dd4e1a95a45d196d3a592.ctex::
+logo.png::CompressedTexture2D/CompressedTexture2D::3192420243141509137::1760885445::1760885969::1::::<><><>0<>0<>cda45c85d017d74fe6c3719948e4d717<>res://.godot/imported/logo.png-5995b7342c0864000894633b026e1922.ctex::
+new background.png::CompressedTexture2D/CompressedTexture2D::693266002314794168::1760885445::1760885969::1::::<><><>0<>0<>d38accb523353239f3ab357e0bd8378b<>res://.godot/imported/new background.png-05f85e380a5909d78d502e6e7a5b7ac3.ctex::
+::res://public/::1760885445
+::res://scene/::1760888739
+auth.tscn::PackedScene/PackedScene::5404137673520804963::1760885445::0::1::::<><><>0<>0<><>::uid://cxpxu66vywhix::::res://script/auth.gd
+auth_helper.tscn::PackedScene/PackedScene::4121682106659864439::1760885445::0::1::::<><><>0<>0<><>::uid://cy6ryft2l4uye::::res://script/auth_helper.gd
+create_users_panel.tscn::PackedScene/PackedScene::418851727243928250::1760885445::0::1::::<><><>0<>0<><>::uid://ncwfxpvc1nst::::res://asset/create user bg .png<>uid://u476cuxb6suk::::res://script/create_users_panel.gd<>uid://cc2vcvusnujt7::::res://asset/fonts/Anton-Regular.ttf
+friend_list.tscn::PackedScene/PackedScene::3384305686883067820::1760885445::0::1::::<><><>0<>0<><>::uid://q2bbcw5bdvqc::::res://script/friend_list.gd
+landing.tscn::PackedScene/PackedScene::2136296244872901048::1760885445::0::1::::<><><>0<>0<><>::uid://dqln3gc2uswuk::::res://script/landing.gd<>uid://copge130jsikm::::res://asset/Cyberpunk_City_Video_Generation.ogv<>uid://cq7k5uvykyfbt::::res://asset/icons/code breaker 1.png<>uid://bohnaxmk78jfw::::res://scene/friend_list.tscn<>uid://cnxhft11givsa::::res://asset/icons/logo 48x48.png<>uid://ca874tphfshxx::::res://asset/avatars/default.png<>uid://dp4co62dijgua::::res://asset/icons/akashic tgc 1.png<>uid://cckv7p82fksqa::::res://asset/icons/Defuse the trojan 1.png
+login.tscn::PackedScene::2891000544882103285::1760888739::0::1::::<><><>0<>0<><>::uid://c5qxaigtag7rk::::res://asset/bg video.ogv<>uid://b2q0proc6qek6::::res://script/login.gd<>uid://blqoxvny7npuf::::res://asset/icons/logo.png<>uid://c50acgmi0vimf::::res://asset/icons/icons8-google-48.png<>uid://b7u1847g1yjml::::res://asset/icons/icons8-facebook-logo-48.png
+signup.tscn::PackedScene/PackedScene::14871987241587160::1760885445::0::1::::<><><>0<>0<><>::uid://dhidgtnkirpt6::::res://script/signup.gd<>uid://c5qxaigtag7rk::::res://asset/bg video.ogv<>uid://blqoxvny7npuf::::res://asset/icons/logo.png<>uid://b7u1847g1yjml::::res://asset/icons/icons8-facebook-logo-48.png<>uid://c50acgmi0vimf::::res://asset/icons/icons8-google-48.png
+user_profile.tscn::PackedScene/PackedScene::7473992948330661026::1760885445::0::1::::<><><>0<>0<><>::uid://b1fldwbd6ktqq::::res://script/user_profile.gd<>uid://2o4kwx4ukq6v::::res://asset/main lobby or landing bg.png
+::res://script/::1760888498
+auth.gd::GDScript/GDScript::6419584321183450579::1760885445::0::1::::<>Node<><>0<>0<><>::
+auth_helper.gd::GDScript/GDScript::6522444666216234300::1760885445::0::1::::<>Node<><>0<>0<><>::
+create_users_panel.gd::GDScript/GDScript::1465642267998339426::1760885445::0::1::::<>Control<><>0<>0<><>::
+friend_list.gd::GDScript::1178822340751742686::1760888498::0::1::::<>Panel<><>0<>0<><>::
+landing.gd::GDScript::8305831347201706426::1760888498::0::1::::<>Control<><>0<>0<><>::
+login.gd::GDScript/GDScript::4316095132369812275::1760885445::0::1::::<>Control<><>0<>0<><>::
+signup.gd::GDScript/GDScript::7667292862811578089::1760885445::0::1::::<>Control<><>0<>0<><>::
+user_profile.gd::GDScript/GDScript::4222326908591043548::1760885445::0::1::::<>Control<><>0<>0<><>::

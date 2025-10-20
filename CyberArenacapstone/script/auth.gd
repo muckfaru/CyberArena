@@ -175,3 +175,39 @@ func _on_request_completed(result: int, response_code: int, _h: PackedStringArra
 	print("ID Token:", current_id_token.left(25), "...\n")
 
 	emit_signal("auth_response", response_code, response)
+# Add this function to your auth.gd file
+func set_user_offline() -> void:
+	var user_id = current_local_id
+	var id_token = current_id_token
+	
+	if user_id == "" or id_token == "":
+		push_warning("⚠️ Cannot set user offline - not logged in")
+		return
+	
+	var firestore_url = "https://firestore.googleapis.com/v1/projects/capstone-823dc/databases/(default)/documents/users/%s" % user_id
+	
+	var body = {
+		"fields": {
+			"status": { "stringValue": "offline" },
+			"last_seen": { "integerValue": str(Time.get_unix_time_from_system()) }
+		}
+	}
+	
+	var headers = [
+		"Content-Type: application/json",
+		"Authorization: Bearer %s" % id_token
+	]
+	
+	var http = HTTPRequest.new()
+	add_child(http)
+	
+	# Use a one-shot connection since we're logging out
+	http.request_completed.connect(func(_result, _code, _headers, _body):
+		print("✅ User status set to offline")
+		http.queue_free()
+	)
+	
+	var error = http.request(firestore_url, headers, HTTPClient.METHOD_PATCH, JSON.stringify(body))
+	if error != OK:
+		push_error("❌ Failed to set user offline: %s" % error)
+		http.queue_free()

@@ -21,7 +21,7 @@ func _ready():
 	google_login_btn.pressed.connect(_on_google_login_pressed)
 
 	email_regex.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$")
-
+	
 
 # ------------------------------------------------------
 # 🔹 Email/Password Login (Pag-login gamit ang email at password)

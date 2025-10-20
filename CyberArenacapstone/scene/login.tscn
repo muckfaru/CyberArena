@@ -132,6 +132,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_i5fi3")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7yur4")
 max_length = 15
 caret_blink = true
+secret = true
 
 [node name="DontHaveAccLabel" type="Label" parent="VideoStreamPlayer"]
 layout_mode = 0

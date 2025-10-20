@@ -25,7 +25,8 @@ func _ready():
 	email_input.text_changed.connect(_validate_inputs)
 	password_input.text_changed.connect(_validate_inputs)
 	repeat_password_input.text_changed.connect(_validate_inputs)
-
+	password_input.secret = true      
+	repeat_password_input.secret = true  # Add this line
 
 # ------------------------------------------------------
 # 🔹 Google OAuth2 Sign Up Flow (sinisimulan ang local server + binubuksan ang browser)

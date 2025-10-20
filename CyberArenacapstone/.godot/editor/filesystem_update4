@@ -1,0 +1,6 @@
+res://scene/login.tscn
+res://script/landing.gd
+res://script/auth.gd
+res://script/friend_list.gd
+res://script/signup.gd
+res://script/login.gd
