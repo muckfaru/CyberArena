@@ -17,6 +17,17 @@ func _ready():
 	add_child(oauth_helper)
 	oauth_helper.token_received.connect(_on_google_code_received)
 	Auth.auth_response.connect(_on_auth_response)
+	signup_button.pressed.connect(_on_signup_pressed)
+	google_signup_btn.pressed.connect(_on_google_signup_pressed)
+	email_regex.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$")
+	email_input.text_changed.connect(_validate_inputs)
+	password_input.text_changed.connect(_validate_inputs)
+	repeat_password_input.text_changed.connect(_validate_inputs)
+	password_input.secret = true
+	repeat_password_input.secret = true	# panimulang setup
+	add_child(oauth_helper)
+	oauth_helper.token_received.connect(_on_google_code_received)
+	Auth.auth_response.connect(_on_auth_response)
 
 	signup_button.pressed.connect(_on_signup_pressed)
 	google_signup_btn.pressed.connect(_on_google_signup_pressed)
